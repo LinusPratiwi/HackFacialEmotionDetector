@@ -5,9 +5,7 @@
 
 # Pull Request 
 1. Make sure your branch updated with main branch
-```
-  git pull origin main
-```
+```git pull origin main```
 2. Make changes and new branch
 ``` git checkout -b <new_branch_name> ```
 4. Commit your changes
