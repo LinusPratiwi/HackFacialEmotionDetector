@@ -1,30 +1,30 @@
-import React from 'react'
+import React, { useRef, useEffect } from 'react'
 import './App.css'
+import './FaceDetection'
+import * as faceapi from 'face-api.js'
+import FaceDetection from './FaceDetection'
+import Button from 'react-bootstrap/Button'
 
 function App() {
-	return (
-		<>
-			<div id="app" className="app">
-				<div className="overlay"></div>
-				<div className="text">
-					<span aria-label="emoji" role="img" id="emoji">
-						😐
-					</span>
-					You look <span id="textStatus">...</span>!
-				</div>
-				<div className="mockup">
-					<div id="browser " className="browser">
-						<div className="browserChrome">
-							<div className="browserActions"></div>
-						</div>
-						<canvas id="canvas"> </canvas>
-						<video id="video" width="540" height="405" muted autoPlay></video>
-					</div>
-				</div>
-				<p className="note">You are not being recorded, it all happens in your own browser!</p>
-			</div>
-		</>
-	)
+  return (
+    <div>
+      <div id="app" className="app">
+        <div className="overlay"></div>
+        <div className="d-flex align-items-center justify-content-center app-wrapper">
+          <div className="text">
+            <span aria-label="emoji" role="img" id="emoji">
+              😐 🎉
+            </span>
+            How are you feeling today <span id="textStatus">...</span>?
+            <div className="content">
+              <Button variant="light">Scan Emotion</Button>
+            </div>
+          </div>
+        </div>
+        <FaceDetection />
+      </div>
+    </div>
+  )
 }
 
 export default App
