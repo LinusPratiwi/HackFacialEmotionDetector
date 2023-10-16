@@ -6,6 +6,7 @@ const app = document.getElementById('app')
 //Start video
 startVideo = () => {
 	// Older browsers might not implement mediaDevices at all, so we set an empty object first
+	console.log(faceapi)
 	if (navigator.mediaDevices === undefined) {
 		navigator.mediaDevices = {}
 	}
