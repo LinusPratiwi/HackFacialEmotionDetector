@@ -11,9 +11,9 @@
     "react": "^16.13.1",
     "react-bootstrap": "^2.9.0",
     "react-dom": "^16.14.0",
+    "react-router-dom": "^6.17.0",
     "react-scripts": "^3.4.2"
   },
-  "homepage": "https://louiejancevski.github.io/FacialEmotionDetector",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
