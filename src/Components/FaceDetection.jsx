@@ -7,7 +7,7 @@ function FaceDetection() {
   // LOAD FROM USEEFFECT
   useEffect(() => {
     startVideo()
-  }, [])
+  }, []) 
 
   // OPEN YOU FACE WEBCAM
   const startVideo = () => {
