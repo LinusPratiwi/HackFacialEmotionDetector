@@ -3,7 +3,7 @@ import './App.css'
 import './Components/FaceDetection'
 import { Routes, Route } from 'react-router-dom';
 import Feedback from './Pages/Feedback';
-import VideoChat from './Pages/VideoChat';
+import Feel from './Pages/Feel';
 import Home from './Pages/Home';
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
     <div>
       <Routes>
       <Route path='/feedback' element={<Feedback/>}/>
-        <Route path='/chat' element={<VideoChat/>}/>
+        <Route path='/chat' element={<Feel/>}/>
         <Route path='/' element={<Home/>}/>
       </Routes>
     </div>
