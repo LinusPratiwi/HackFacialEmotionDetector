@@ -9,7 +9,7 @@
     height: 100px; /* Set the initial height */
     border-radius: 50%; /* Create a circular shape */
     overflow: hidden; /* Hide overflowing content */
-    transition: all 0.5s; /* Add a smooth transition */
+    transition: all 1s; /* Add a smooth transition */
     position: absolute;
     top: 10px; /* Adjust the top position as needed */
     left: 10px; /* Adjust the left position as needed */
@@ -18,7 +18,7 @@
   /* Style for the rectangular image (initial state) */
   .rectangular-image {
     width: 100%; /* Full width */
-    transition: all 0.5s; /* Add a smooth transition */
+    transition: all 1s; /* Add a smooth transition */
   }
   
   /* Add styles for the captured image */

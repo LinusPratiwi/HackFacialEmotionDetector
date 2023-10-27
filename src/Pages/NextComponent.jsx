@@ -5,7 +5,7 @@ function NextComponent({ name }) {
   return (
     <div>
       <h2>Hello, {name}!</h2>
-      <PhotoCapture/>
+      <PhotoCapture name={name}/>
     </div>
   );
 }
