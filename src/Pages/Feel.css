@@ -1,0 +1,10 @@
+body {
+	background-color: #76abbaa8;
+}
+
+.center-card {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+  }
