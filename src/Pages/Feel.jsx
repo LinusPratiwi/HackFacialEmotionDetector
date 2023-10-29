@@ -16,12 +16,12 @@ function Feel() {
       {showNext ? (
         <NextComponent name={name} />
       ) : (
-        <div class="container center-card">
-          <div class="row">
-            <div class="col-12 d-flex align-items-center justify-content-center">
+        <div className="container center-card">
+          <div className="row">
+            <div className="col-12 d-flex align-items-center justify-content-center">
               <div className="card" style={{ "width": "18rem", "boxShadow": "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)" }}>
-                <div class="card-body">
-                  <h5 class="card-title">Enter Your Name</h5>
+                <div className="card-body">
+                  <h5 className="card-title">Enter Your Name</h5>
                   <input
                     type="text"
                     value={name}
