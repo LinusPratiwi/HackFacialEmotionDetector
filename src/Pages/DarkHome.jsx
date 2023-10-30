@@ -21,7 +21,7 @@ function DarkHome() {
           </h5>
           <Button variant="primary">
             <a href="/entry" className="text-white text-decoration-none">
-              More
+              Try Demo
             </a>
           </Button>
         </div>
@@ -34,7 +34,10 @@ function DarkHome() {
               </div>
               <Carousel.Caption>
                 <h1>Emotion</h1>
-                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                <p>
+                  Identify your emotional state and offer suggestions for relevant books and
+                  podcasts.
+                </p>
               </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
@@ -43,7 +46,7 @@ function DarkHome() {
               </div>
               <Carousel.Caption>
                 <h1>Chatbot</h1>
-                <p className='mx-5'>
+                <p className="mx-5">
                   It engages in conversations with you, asks questions about your well-being, and
                   offers constructive feedback to help you better understand and manage your mental
                   health.
@@ -56,7 +59,7 @@ function DarkHome() {
               </div>
               <Carousel.Caption>
                 <h1>Feedback</h1>
-                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                <p>Provide you with feedback regarding your emotional state.</p>
               </Carousel.Caption>
             </Carousel.Item>
           </Carousel>

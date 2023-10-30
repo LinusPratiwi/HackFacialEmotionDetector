@@ -11,9 +11,8 @@ const PhotoCapture = ({ name }) => {
   const [loading, setLoading] = useState(false)
   const [showChat, setShowChatbot] = useState(false)
 
-
   const capture = useCallback(async () => {
-    const imageSrc = await webcamRef  .current.getScreenshot()
+    const imageSrc = await webcamRef.current.getScreenshot()
     setImgSrc(imageSrc)
     if (localStorage.getItem('imageSrc') === '' || !localStorage.getItem('imageSrc'))
       localStorage.setItem('imageSrc', imageSrc)
@@ -39,6 +38,7 @@ const PhotoCapture = ({ name }) => {
       const emotions = detections[0].expressions
       // Find the emotion with the highest confidence
       const maxEmotion = Object.keys(emotions).reduce((a, b) => (emotions[a] > emotions[b] ? a : b))
+      console.log(maxEmotion, 'emotion')
       if (localStorage.getItem('emotion') === '' || !localStorage.getItem('emotion'))
         localStorage.setItem('emotion', maxEmotion)
       setDetectedEmotion(maxEmotion)
@@ -81,7 +81,7 @@ const PhotoCapture = ({ name }) => {
         )}
         {detectedEmotion && <h3>{detectedEmotion}</h3>}
         <Image src="conversation.png" className="bls-float-msg" onClick={showChatbot} />
-        {showChat && <ChatBot/>}
+        {showChat && <ChatBot />}
       </div>
     </div>
   )

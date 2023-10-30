@@ -20,7 +20,7 @@ function Feel() {
     <div className="row h-100 ms-5">
       <div className="col-5 h-100 bls-left-radius d-flex">
         <div className="align-self-center mx-5">
-          <h1 className="bls-title-medium mb-3">Hi {_name}, </h1>
+          <h1 className="bls-title-medium mb-3">Hi {_name} </h1>
 
           <h5 className="mb-4">Let's see how well you're doing today ! </h5>
           {!_imageSrc && (
@@ -34,7 +34,7 @@ function Feel() {
               </Card.Body>
             </Card>
           )}
-          {_imageSrc && _emotion && (
+          {_emotion && (
             <Tabs defaultActiveKey="tab1" id="tabbed-cards">
               <Tab eventKey="tab1" title="Book">
                 <Card>
