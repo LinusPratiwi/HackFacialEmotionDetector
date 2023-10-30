@@ -1,9 +1,8 @@
 import React, { useState } from 'react'
 import NextComponent from './NextComponent'
-import PhotoCapture from './PhotoCapture'
+import PhotoCapture from '../Components/PhotoCapture'
 import './Feel.css'
-// import { Form } from 'react-bootstrap'
-import { Form, Nav, Image, Card } from 'react-bootstrap'
+import { Tab, Tabs, Image, Card } from 'react-bootstrap'
 
 function Feel() {
   const [name, setName] = useState('')
@@ -12,50 +11,18 @@ function Feel() {
   const _imageSrc = localStorage.getItem('imageSrc')
   const _emotion = localStorage.getItem('emotion')
 
-  console.log(_name, 'daf', showNext)
   const handleNextClick = () => {
     if (!_name) localStorage.setItem('name', name)
     setShowNext(true)
   }
 
   return (
-    // <div>
-    //   <div className="container center-card">
-    //     {showNext || _name ? (
-    //       <NextComponent name={name} />
-    //     ) : (
-    //       <div className="container center-card">
-    //         <div className="row">
-    //           <div className="mb-3">
-    //             <h2 className="text-center">Let Us Know More About You</h2>
-    //             {/* <h3 className="text-center">Tell Us More About You</h3> */}
-    //             <h2 className="text-center">...</h2>
-    //           </div>
-    //           <div className="col-12 d-flex align-items-center justify-content-center">
-    //             <div
-    //               className="card"
-    //               style={{
-    //                 width: '30vw',
-    //                 boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)',
-    //               }}
-    //             >
-    //               <div className="card-body">
-    //                 <h5 className="card-title"></h5>
-    //               </div>
-    //             </div>
-    //           </div>
-    //         </div>
-    //       </div>
-    //     )}
-    //   </div>
-
-    // </div>
     <div className="row h-100 ms-5">
       <div className="col-5 h-100 bls-left-radius d-flex">
         <div className="align-self-center mx-5">
           <h1 className="bls-title-medium mb-3">Hi {_name}, </h1>
 
-          <h5 className="mb-4">Let's see how well you're doing today ...</h5>
+          <h5 className="mb-4">Let's see how well you're doing today ! </h5>
           {!_imageSrc && (
             <Card>
               {/* <Card.Img variant="bottom" src="instructions.png" className="w-75" /> */}
@@ -68,63 +35,46 @@ function Feel() {
             </Card>
           )}
           {_imageSrc && _emotion && (
-            <div className="">
-              <div class="container">
-                <h1 class="text-center">Card component with Navigation</h1>
-                <div class="row">
-                  <div class="col-sm-6">
-                    <div class="card text-center my-4">
-                      <div class="card-header">
-                        <ul class="nav nav-tabs card-header-tabs">
-                          <li class="nav-item">
-                            <a class="nav-link active" data-toggle="tab" href="#tab1">
-                              Tab 1
-                            </a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link" data-toggle="tab" href="#tab2">
-                              Tab 2
-                            </a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link" data-toggle="tab" href="#tab3">
-                              Tab 3
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-
-                      <div class="card-body tab-content">
-                        <div class="tab-pane fade show active" id="tab1">
-                          <h4 class="card-title">Title Tab 1</h4>
-                          <p class="card-text">We have some propose for your better life</p>
-                          <a href="#" class="btn btn-primary">
-                            Read More 1
-                          </a>
-                        </div>
-                        <div class="tab-pane fade" id="tab2">
-                          <h4 class="card-title">Tab 2 Title</h4>
-                          <p class="card-text">Don't give up 'cos you have friends </p>
-                          <a href="#" class="btn btn-danger">
-                            Read More 2
-                          </a>
-                        </div>
-                        <div class="tab-pane fade" id="tab3">
-                          <h4 class="card-title">Tab 3 Title</h4>
-                          <p class="card-text">Never say Never. Dont't warry, be happy</p>
-                          <a href="#" class="btn btn-success">
-                            Read More 3
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              {/* <Image src={_imageSrc} className="w-75 rounded-3 bls-shadow-image" /> */}
-              <h2>You look {_emotion}</h2>
-
-            </div>
+            <Tabs defaultActiveKey="tab1" id="tabbed-cards">
+              <Tab eventKey="tab1" title="Book">
+                <Card>
+                  <Card.Body>
+                    <Card.Text className="text-center">
+                      <span>The Body Keeps The Score, Bessel Van Der Kolk</span>
+                      <iframe
+                        className="mt-3"
+                        type="text/html"
+                        sandbox="allow-scripts allow-same-origin allow-popups"
+                        width="212"
+                        height="362"
+                        frameborder="0"
+                        allowfullscreen
+                        src="https://read.amazon.com/kp/card?asin=B00G3L1C2K&preview=newtab&linkCode=kpe&ref_=cm_sw_r_kb_dp_3NK7BPD3ST7YXZJK4WG0"
+                      ></iframe>
+                    </Card.Text>
+                  </Card.Body>
+                </Card>
+              </Tab>
+              <Tab eventKey="tab2" title="Podcast">
+                <Card>
+                  <Card.Body>
+                    <Card.Text className="text-center">
+                      <span>Let's Talk About Mental Health, Jeremy Godwin</span>
+                      <iframe
+                        className="mt-3"
+                        src="https://open.spotify.com/embed/show/2kH3ec1ljTia7VmwYsm8Xt?utm_source=generator&theme=0"
+                        width="100%"
+                        height="352"
+                        frameBorder="0"
+                        allowfullscreen=""
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                        loading="lazy"
+                      ></iframe>
+                    </Card.Text>
+                  </Card.Body>
+                </Card>
+              </Tab>
+            </Tabs>
           )}
         </div>
       </div>

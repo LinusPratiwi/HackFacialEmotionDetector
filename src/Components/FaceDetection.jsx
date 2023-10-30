@@ -11,7 +11,6 @@ function FaceDetection() {
 
   // OPEN YOU FACE WEBCAM
   const startVideo = () => {
-    // console.log('111', faceapi.nets.tinyFaceDetector.loadFromUri('/public/models'))
     navigator.mediaDevices
       .getUserMedia({ video: true })
       .then((currentStream) => {
@@ -20,7 +19,6 @@ function FaceDetection() {
       .catch((err) => {
         console.log(err)
       })
-    console.log('dasf')
   }
   
   return (

@@ -1,29 +1,70 @@
 .photo-capture-container {
-    position: relative;
-    text-align: center;
-  }
-  
-  /* Style for the circular image */
-  .circular-image {
-    width: 100px; /* Set the initial width */
-    height: 100px; /* Set the initial height */
-    border-radius: 50%; /* Create a circular shape */
-    overflow: hidden; /* Hide overflowing content */
-    transition: all 1s; /* Add a smooth transition */
-    position: absolute;
-    top: 10px; /* Adjust the top position as needed */
-    left: 10px; /* Adjust the left position as needed */
-  }
-  
-  /* Style for the rectangular image (initial state) */
-  .rectangular-image {
-    width: 100%; /* Full width */
-    transition: all 1s; /* Add a smooth transition */
-  }
-  
-  /* Add styles for the captured image */
-  .photo-capture-container img {
-    display: block;
-    margin: 0 auto;
-  }
-  
+  position: relative;
+  text-align: center;
+}
+
+/* Style for the circular image */
+.circular-image {
+  width: 100px;
+  /* Set the initial width */
+  height: 100px;
+  /* Set the initial height */
+  border-radius: 50%;
+  /* Create a circular shape */
+  overflow: hidden;
+  /* Hide overflowing content */
+  transition: all 1s;
+  /* Add a smooth transition */
+  position: absolute;
+  top: 10px;
+  /* Adjust the top position as needed */
+  left: 10px;
+  /* Adjust the left position as needed */
+}
+
+/* Style for the rectangular image (initial state) */
+.rectangular-image {
+  width: 100%;
+  /* Full width */
+  transition: all 1s;
+  /* Add a smooth transition */
+}
+
+/* Add styles for the captured image */
+.photo-capture-container img {
+  display: block;
+  margin: 0 auto;
+}
+
+
+.bls-float-msg {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #007bff;
+  color: #fff;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.bls-chatbot {
+  position: fixed;
+  width: 21vw;
+  bottom: 15%;
+  max-height: 70vh;
+  min-height: 56vh;
+  right: 12%;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.cs-message__content {
+  margin-top: 10px !important;
+}

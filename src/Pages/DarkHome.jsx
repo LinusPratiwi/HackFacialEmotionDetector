@@ -1,30 +1,14 @@
 import React from 'react'
 import './Home.css'
 import { Container, Image, Button, Navbar, Nav, Carousel } from 'react-bootstrap'
-// import ExampleCarouselImage from 'components/ExampleCarouselImage'
 
 function DarkHome() {
   return (
     <>
-      {/* <Navbar className="position-absolute bls-side-desc">
-        <Container>
-          <Navbar.Brand href="/home">
-            <img src="bliss_sw.png" width="30" height="30" className="d-inline-block align-top" />
-          </Navbar.Brand>
-          <Nav className="me-auto">
-            <Nav.Link href="/chat" className="fw-bold">
-              Chat With Us
-            </Nav.Link>
-            <Nav.Link href="/feedback" className="fw-bold">
-              Feedback
-            </Nav.Link>
-          </Nav>
-        </Container>
-      </Navbar> */}
       <div className="dark-mode-home row">
         <div className="col-6 bls-side-desc">
           <h6 className="bls-text-subheadline mb-5">
-            Hi <span className="bls-text-subheadline text-decoration-underline">,</span>
+            {/* Hi <span className="bls-text-subheadline text-decoration-underline">,</span> */}
           </h6>
           <h1 className="bls-title-medium mb-3">Welcome to </h1>
           <h1 className="bls-title-medium mb-5">

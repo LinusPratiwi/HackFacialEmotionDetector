@@ -68,7 +68,6 @@ function ChatBot() {
     }).then((data) => {
       return data.json();
     }).then((data) => {
-      console.log(data);
       setMessages(
         [...chatMessages, {
           message: data.choices[0].message.content,
@@ -81,13 +80,17 @@ function ChatBot() {
   return (
     <div>
       <MainContainer>
-        <ChatContainer>
-          <MessageList scrollBehavior='smooth' typingIndicator={typing ? <TypingIndicator content="Universe is typing" /> : null }>
-            {messages.map((message,i)=> {
-              return <Message key={i} model={message}/>
+        <ChatContainer className="bls-chatbot">
+          <MessageList
+            className="rounded-3"
+            scrollBehavior="smooth"
+            typingIndicator={typing ? <TypingIndicator content="Universe is typing" /> : null}
+          >
+            {messages.map((message, i) => {
+              return <Message key={i} model={message} />
             })}
           </MessageList>
-          <MessageInput placeholder='Type message here' onSend={handleSend}/>
+          <MessageInput placeholder="Type message here" onSend={handleSend} className="rounded-3" />
         </ChatContainer>
       </MainContainer>
     </div>
