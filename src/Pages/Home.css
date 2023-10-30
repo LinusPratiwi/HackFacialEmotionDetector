@@ -1,10 +1,86 @@
-.home {
+
+
+.dark-mode-home {
 	margin: 0;
 	padding: 0;
 	width: 100%;
 	height: 100vh;
 	justify-content: center;
 	align-items: center;
+	overflow: auto;
+	background: var(--dark-background);
+
+	.bls-text-body,
+	.bls-title-regular,
+	.bls-title-medium,
+	.bls-text-subheadline {
+		color: var(--secondary-bg);
+	}
+}
+
+#darkhome-carousel {
+	border-radius: 12px;
+	background: var(--secondary-bg);
+	height: 66vh;
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.carousel-control-next-icon {
+	background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAq0lEQVR4nO3WWwrCQBBE0Tt7EXzMZgKKG9Mori/gYwv6oQQMiCS/0tXWgVnApRoSMDMzi6MBFohbA3fgBlTEI57vd1WNOX1EDO8MzBFTgMNITL/MCjHFMYGXaTOdWesYsWWWJIm5qMbsHRNQumWOIzEdMEMwZjexTCXJiVXEfy6lTmtqCUf8mpeIwktE4SWi8BJRlAxfbLJE9LbAQz3iO0Y6YrDJEGFmZv/nBXoyq5wBMXErAAAAAElFTkSuQmCC");
+}
+
+.carousel-control-prev-icon {
+	background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAs0lEQVR4nO3YPQrCUBRE4VPYGC1ugq5QcBWCywoKFrH0p9ANRdJIEGPrncd8kCLlYZLwCJiZmelZAxsKiHgCPbCjgIheNWYFPD4ihusEzBBRA7cvEWdgiYjaEUl4iUxLXNVf7HBEEuElkogSlmiA+8TZqUJoiYv6EkWFDByjtkxXWswCMeEYsWWOwBwx4ZikvIzaMgfFD0AzcexvlX6Z/lpmj6gYxchGjB+z7fvOzMyM/3oBpEGsCx9x36kAAAAASUVORK5CYII=");
+}
+
+.carousel-indicators [data-bs-target] {
+	background-color: #767676;
+}
+
+.carousel-caption {
+	position: static;
+	color: inherit;
+	padding: 0px 70px;
+}
+
+.carousel-images {
+	width: 20%;
+	/* transform: translateX(15vw); */
+}
+
+.carousel-inner {
+	width: 100%;
 	overflow: hidden;
-	background-color: var(--secondary-white);
+	position: absolute;
+	right: 0;
+	bottom: 125px;
+	left: 0;
+	z-index: 2;
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+	z-index: 1000;
+}
+
+
+/* Side Description */
+.bls-side-desc {
+	padding-left: 7%;
+}
+
+/* image span */
+
+.bls-image-span {
+	width: 11%;
+}
+
+.bls-side-bg {
+	background-color: var(--side-bg);
+}
+.carousel-indicators [data-bs-target] {
+	 border-radius: 100%;
+	 width: 10px;
+	 height: 10px;
+	 background-color: var(--btn-primary);
 }

@@ -1,5 +1,5 @@
 body {
-	background-color: #76abbaa8;
+	/* background-color: #76abbaa8; */
 }
 
 .center-card {
@@ -8,3 +8,11 @@ body {
 	align-items: center;
 	min-height: 100vh;
   }
+
+.cam_container {
+	transform: translateY(10%);
+}
+
+.bls-shadow-image {
+	box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+}
